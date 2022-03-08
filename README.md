@@ -7,7 +7,7 @@ A personal style guide for code in Visual Studio Code. 🚧
 ## Links
 
 - [vscode-settings](#vscode-settings)
-  - [Liks](#liks)
+  - [Links](#links)
   - [Extensions](#extensions)
     - [Font](#font)
     - [Theme/Color](#themecolor)
