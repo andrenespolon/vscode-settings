@@ -1,8 +1,10 @@
 # vscode-settings
 
-A personal style guide for code in VS Code. 🚧
+A personal style guide for code in Visual Studio Code. 🚧
 
-## Liks
+
+
+## Links
 
 - [vscode-settings](#vscode-settings)
   - [Liks](#liks)
@@ -15,23 +17,40 @@ A personal style guide for code in VS Code. 🚧
   - [settings.json](#settingsjson)
   - [keybindings.json](#keybindingsjson)
 
+
+
 ## Extensions
 
 ### Font
+
+**Option 1**
+
+- [Operator Mono](https://coding-fonts.css-tricks.com/fonts/operator-mono/)
+  - Designed by Andy Clymer and Hoefler & Co
+
+**Option 2**
 
 - [Fira Code Retina](https://github.com/tonsky/FiraCode)
   - Free monospaced font with programming ligatures.
 
 ### Theme/Color
 
+**Option 1**
+
+- [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme)
+  
+  - Atom‘s iconic One Dark theme for Visual Studio Code
+
+- [Nomo Dark Icon Theme](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-icontheme-nomo-dark)
+  
+  - Nomo Dark Icon Theme
+
+**Option 2**
+
 - [Dracula](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)
   - Official Dracula Theme. A dark theme for many editors, shells, and more.
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
   - Material Design Icons for Visual Studio Code.
-- [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
-  - Highlight web colors in your editor.
-- [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
-  - Support for dotenv file syntax.
 
 ### Workflow
 
@@ -39,10 +58,20 @@ A personal style guide for code in VS Code. 🚧
   - Automatically add HTML/XML close tag.
 - [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
   - Automatically rename paired HTML/XML tag.
-- [Rocketseat ReactJS](https://marketplace.visualstudio.com/items?itemName=rocketseat.RocketseatReactJS)
-  - ReactJS snippets created by Rocketseat.
-- [HTML Snippets](https://marketplace.visualstudio.com/items?itemName=abusaidm.html-snippets)
-  - Full HTML tags including HTML5 Snippets.
+- [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
+  - Improve your code commenting by annotating with alert, informational, TODOs, and more!
+- Fig
+  - Companion extension for Fig to help integrate with VS Code
+- [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+  - View a Git Graph of your repository, and perform Git actions from the graph.
+- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+  - For git version history
+- [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
+  - Display import/require package size in the editor
+- [LottieFiles for VS Code](https://marketplace.visualstudio.com/items?itemName=lottiefiles.vscode-lottie)
+  - View and edit Lottie and dotLottie files.
+- Todo Tree
+  - Show TODO, FIXME, etc. comment tags in a tree view
 
 ### IntelliSense/AutoComplete
 
@@ -54,6 +83,14 @@ A personal style guide for code in VS Code. 🚧
   - Autocompletes filenames.
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
   - All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more).
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+  - Intelligent Tailwind CSS tooling for VS Code
+- [Rocketseat ReactJS](https://marketplace.visualstudio.com/items?itemName=rocketseat.RocketseatReactJS)
+  - ReactJS snippets created by Rocketseat.
+- [HTML Snippets](https://marketplace.visualstudio.com/items?itemName=abusaidm.html-snippets)
+  - Full HTML tags including HTML5 Snippets.
+- [Jest Snippets](https://marketplace.visualstudio.com/items?itemName=andys8.jest-snippets)
+  - Code snippets for testing framework Jest
 
 ### Style/Formatting
 
@@ -65,56 +102,88 @@ A personal style guide for code in VS Code. 🚧
   - Code formatter using prettier.
 - [VS Code Styled Components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
   - Syntax highlighting for styled-components.
+- [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
+  - Highlight web colors in your editor.
+- [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
+  - Support for dotenv file syntax.
+- [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+  - Extensions for React, React-Native and Redux in JS/TS with ES7+ syntax. Customizable. Built-in integration with prettier.
+- [Prisma](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma)
+  - Adds syntax highlighting, formatting, auto-completion, jump-to-definition and linting for .prisma files.
+- [TypeScript Hero](https://marketplace.visualstudio.com/items?itemName=rbbit.typescript-hero)
+  - Additional toolings for typescript
 
 ## settings.json
 
 ```json
 {
-  "editor.fontSize": 16,
-  "editor.lineHeight": 24,
-  "editor.fontFamily": "Fira Code Retina",
+  "editor.fontSize": 20,
+  "editor.lineHeight": 30,
+  "editor.letterSpacing": 0.4,
+  "editor.cursorStyle": "line",
+  "editor.hover.delay": 1500,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.showDeprecated": true,
+  "editor.fontFamily": "Operator Mono SSm Lig",
   "editor.fontLigatures": true,
+  "outline.icons": true,
   "editor.rulers": [80, 120],
   "editor.formatOnSave": true,
+  "editor.linkedEditing": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.renderLineHighlight": "gutter",
   "editor.tabSize": 2,
-  //"eslint.packageManager": "yarn", // on osx
-  "eslint.packageManager": "npm", // on linux
+  "editor.parameterHints.enabled": false,
+  "editor.minimap.enabled": false,
+  "eslint.packageManager": "yarn",
   "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
-    },
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
   },
   "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
-    },
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
   },
   "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
-    },
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "source.fixAll": true
+    }
   },
   "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
-    },
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "source.fixAll": true
+    }
   },
-  "[html]": {
+  "[sql]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
-    },
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "source.fixAll": true
+    }
   },
-  "[css]": {
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
-    },
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "source.fixAll": true
+    }
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
   },
   "explorer.compactFolders": false,
   "files.associations": {
@@ -122,11 +191,8 @@ A personal style guide for code in VS Code. 🚧
     ".stylelintrc": "json",
     ".prettierrc": "json"
   },
-  "terminal.integrated.fontSize": 16,
-  "terminal.integrated.fontFamily": "Fira Code Retina",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.startupEditor": "newUntitledFile",
-  "window.zoomLevel": 0,
+  "terminal.integrated.fontSize": 20,
+  "terminal.integrated.fontFamily": "Operator Mono",
   "extensions.ignoreRecommendations": true,
   "emmet.syntaxProfiles": {
     "javascript": "jsx"
@@ -134,46 +200,18 @@ A personal style guide for code in VS Code. 🚧
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  "javascript.updateImportsOnFileMove.enabled": "never",
   "breadcrumbs.enabled": true,
   "git.enableSmartCommit": true,
-  "editor.parameterHints.enabled": false,
+  "javascript.updateImportsOnFileMove.enabled": "never",
   "typescript.updateImportsOnFileMove.enabled": "never",
-  "terminal.integrated.shell.osx": "/bin/zsh",
-  "terminal.integrated.shell.linux": "usr/bin/zsh",
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
-  "typescript.tsserver.log": "verbose",
-  "javascript.suggest.autoImports": false,
-  "typescript.suggest.autoImports": false,
-  "workbench.activityBar.visible": true,
-  "editor.minimap.enabled": false,
-  "workbench.colorTheme": "Dracula",
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      {
-        "scope": [],
-        "settings": {
-          "fontStyle": "italic"
-        }
-      }
-    ]
-  },
-  "emojisense.languages": {
-    "markdown": true,
-    "plaintext": false,
-    "json": true,
-    "html": true,
-    "javascript": true,
-    "scminput": true
-  },
-  "window.menuBarVisibility": "toggle",
+  "typescript.tsserver.log": "off",
+  "javascript.suggest.autoImports": true,
   "auto-close-tag.enableAutoCloseTag": true,
   "auto-close-tag.activationOnLanguage": [
     "xml",
-    "javascript",
     "javascriptreact",
-    "typescript",
     "typescriptreact",
     "markdown",
     "vue",
@@ -181,20 +219,86 @@ A personal style guide for code in VS Code. 🚧
   ],
   "auto-rename-tag.activationOnLanguage": [
     "xml",
-    "javascript",
     "javascriptreact",
-    "typescript",
     "typescriptreact",
     "markdown",
     "vue",
     "HTML (Eex)"
-  ]
+  ],
+  "npm-intellisense.importES6": true,
+  "npm-intellisense.importQuotes": "'",
+  "npm-intellisense.importLinebreak": ";\r\n",
+  "npm-intellisense.importDeclarationType": "const",
+  "npm-intellisense.scanDevDependencies": true,
+  "importCost.smallPackageColor": "#44475a",
+  "importCost.mediumPackageColor": "#44475a",
+  "importCost.largePackageColor": "#44475a",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.activityBar.visible": true,
+  "workbench.iconTheme": "vs-nomo-dark",
+  "workbench.colorTheme": "One Dark Pro Flat",
+  "workbench.colorCustomizations": {
+    "badge.background": "#61afef",
+    "activityBarBadge.background": "#61afef"
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["comment", "punctuation.definition.comment"],
+        "settings": {
+          "foreground": "#404754"
+        }
+      },
+      {
+        "scope": ["variable.other.readwrite"],
+        "settings": {
+          "foreground": "#e5c07b"
+        }
+      }
+    ]
+  },
+  "todo-tree.general.tags": ["_bug", "_fix", "_note"],
+  "todo-tree.general.statusBar": "tags",
+  "todo-tree.tree.tagsOnly": false,
+  "todo-tree.highlights.defaultHighlight": {
+    "type": "line",
+    "fontWeight": "bold",
+    "foreground": "#f0f0f0",
+    "background": "#404754",
+    "gutterIcon": true
+  },
+  "todo-tree.highlights.customHighlight": {
+    "_note": {
+      "foreground": "#e5c07b",
+      "iconColour": "#e5c07b",
+      "icon": "info"
+    },
+    "_fix": {
+      "foreground": "#c678dd",
+      "iconColour": "#c678dd",
+      "icon": "tools"
+    },
+    "_bug": {
+      "foreground": "#e06c75",
+      "iconColour": "#e06c75",
+      "icon": "zap"
+    }
+  },
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "editor.accessibilitySupport": "off",
+  "reactSnippets.settings.typescript": true,
+  "reactSnippets.settings.prettierEnabled": true,
+  "reactSnippets.settings.importReactOnTop": true,
+  "reactSnippets.settings.typescriptPropsStatePrefix": "type",
+  "reactSnippets.settings.languageScopes": "typescript,typescriptreact,javascript,javascriptreact"
 }
 ```
 
 ## keybindings.json
 
-> Note: Some keys bindings maybe not be available on windows system. See more about key bindings for windows on [offcial site](https://code.visualstudio.com/docs/getstarted/keybindings).
+> Note: Some keys bindings maybe not be available on windows system. See more about key bindings for windows in [offcial site](https://code.visualstudio.com/docs/getstarted/keybindings).
 
 ```json
 [
